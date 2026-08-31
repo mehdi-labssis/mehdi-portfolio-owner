@@ -1,0 +1,1 @@
+import SiteHeader from "@/components/SiteHeader";import SiteFooter from "@/components/SiteFooter";import ProjectDetail from "@/components/ProjectDetail";import {projectBySlug} from "@/lib/projects";export default function Page(){return <><SiteHeader/><ProjectDetail project={projectBySlug("sectionforge")}/><SiteFooter/></>}
