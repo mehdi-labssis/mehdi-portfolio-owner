@@ -1,6 +1,6 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+﻿import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 
-const checkoutUrl = "https://mehdilabs.lemonsqueezy.com/checkout/buy/304491fb-1850-4838-9b9e-c3d223168c29";
+const checkoutUrl = "https://mehdi-labs-store.lemonsqueezy.com/checkout/buy/304491fb-1850-4838-9b9e-c3d223168c29";
 const demoUrl = "https://lunara-demo-bnocapgl.myshopify.com/?pb=0";
 
 const features = [
@@ -13,10 +13,10 @@ const features = [
 export default function VelmoraPage() {
   return <main className="velmora-page">
     <section className="velmora-hero">
-      <div className="velmora-hero-top"><a href="/projects"><ArrowLeft size={16}/> All projects</a><span>Premium Shopify theme · v1.0.1</span></div>
+      <div className="velmora-hero-top"><a href="/projects"><ArrowLeft size={16}/> All projects</a><span>Premium Shopify theme Â· v1.0.1</span></div>
       <div className="velmora-hero-copy">
         <p>Made for fashion with a point of view.</p><h1>VELMORA</h1>
-        <div><p>An editorial Shopify theme for independent labels, fashion boutiques and modern lifestyle stores.</p><strong>$59 <small>USD · one-time payment</small></strong></div>
+        <div><p>An editorial Shopify theme for independent labels, fashion boutiques and modern lifestyle stores.</p><strong>$59 <small>USD Â· one-time payment</small></strong></div>
       </div>
       <div className="velmora-actions"><a className="velmora-buy" href={checkoutUrl} target="_blank" rel="noreferrer">Purchase Velmora <ArrowUpRight size={18}/></a><a className="velmora-demo" href={demoUrl} target="_blank" rel="noreferrer">View live demo <ArrowRight size={18}/></a></div>
       <img className="velmora-hero-image" src="/images/velmora/hero.png" alt="Velmora fashion Shopify theme homepage" />
@@ -29,6 +29,7 @@ export default function VelmoraPage() {
     </section>
     <section className="velmora-features"><div><p className="eyebrow">What is included</p><h2>A strong starting point for a serious fashion store.</h2></div><div className="velmora-feature-list">{features.map(([title,copy], index) => <article key={title}><span>0{index+1}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></section>
     <section className="velmora-package"><div><p className="eyebrow">Your purchase</p><h2>Everything you need to launch.</h2></div><ul><li><Check size={18}/> Installable Shopify theme ZIP</li><li><Check size={18}/> Setup and customization documentation</li><li><Check size={18}/> Changelog and license information</li><li><Check size={18}/> Use on one Shopify store</li></ul><p className="velmora-note">Demo imagery and store products are shown for presentation and are not included in the download.</p></section>
-    <section className="velmora-cta"><p>Velmora 1.0.1 · Immediate digital delivery</p><h2>Give your store<br/><em>a point of view.</em></h2><div><a href={checkoutUrl} target="_blank" rel="noreferrer">Buy now for $59 <ArrowUpRight size={20}/></a><a href="mailto:mehdilabssis@gmail.com">Questions? Contact support</a></div></section>
+    <section className="velmora-cta"><p>Velmora 1.0.1 Â· Immediate digital delivery</p><h2>Give your store<br/><em>a point of view.</em></h2><div><a href={checkoutUrl} target="_blank" rel="noreferrer">Buy now for $59 <ArrowUpRight size={20}/></a><a href="mailto:mehdilabssis@gmail.com">Questions? Contact support</a></div></section>
   </main>;
 }
+
