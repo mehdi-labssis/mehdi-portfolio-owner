@@ -1,0 +1,511 @@
+.page {
+  --lj-ink: #141414;
+  --lj-paper: #f7f4ef;
+  --lj-card: #fffdf9;
+  --lj-line: rgba(20, 20, 20, 0.14);
+  --lj-muted: #6f6b65;
+  --lj-soft: #ede7df;
+  min-height: 100vh;
+  background: var(--lj-paper);
+  color: var(--lj-ink);
+}
+
+.page,
+.page * {
+  box-sizing: border-box;
+}
+
+.hero {
+  border-bottom: 1px solid var(--lj-line);
+  padding: 88px 28px 58px;
+}
+
+.heroInner {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.kicker,
+.sectionEyebrow,
+.sidebarLabel {
+  margin: 0 0 14px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.heroTitle {
+  margin: 0;
+  max-width: 820px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 8vw, 108px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.heroText {
+  margin: 24px 0 0;
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--lj-muted);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid var(--lj-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.primaryButton {
+  background: var(--lj-ink);
+  color: white;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--lj-ink);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.docsShell,
+.supportShell {
+  width: min(1240px, calc(100% - 56px));
+  margin: 0 auto;
+  display: grid;
+  gap: 56px;
+  padding: 64px 0 110px;
+}
+
+.docsShell {
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.sidebarCard,
+.sidebarNote {
+  border: 1px solid var(--lj-line);
+  background: var(--lj-card);
+  padding: 24px;
+}
+
+.sidebarCard nav {
+  display: grid;
+  gap: 4px;
+}
+
+.sidebarCard nav a {
+  color: var(--lj-ink);
+  text-decoration: none;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--lj-line);
+  font-size: 14px;
+}
+
+.sidebarCard nav a:last-child {
+  border-bottom: 0;
+}
+
+.sidebarNote p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--lj-muted);
+}
+
+.sidebarNote a {
+  color: var(--lj-ink);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.docsContent {
+  min-width: 0;
+}
+
+.introCard,
+.ctaCard,
+.formCard,
+.responseNote {
+  border: 1px solid var(--lj-line);
+  background: var(--lj-card);
+}
+
+.introCard {
+  padding: clamp(28px, 5vw, 56px);
+  margin-bottom: 20px;
+}
+
+.introCard h2,
+.ctaCard h2,
+.supportInfo h2,
+.formHeading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.introCard p:last-child,
+.ctaCard p,
+.supportInfo > div:first-child > p:last-child,
+.formHeading p:last-child {
+  max-width: 760px;
+  color: var(--lj-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.docSection {
+  scroll-margin-top: 30px;
+  padding: 54px 0;
+  border-bottom: 1px solid var(--lj-line);
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+
+.sectionHeader span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding-top: 8px;
+  color: var(--lj-muted);
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.docSection > p {
+  max-width: 810px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #4f4c48;
+}
+
+.steps,
+.bullets {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--lj-line);
+}
+
+.steps {
+  counter-reset: item;
+}
+
+.steps li,
+.bullets li {
+  position: relative;
+  padding: 17px 16px 17px 46px;
+  border-bottom: 1px solid var(--lj-line);
+  line-height: 1.6;
+}
+
+.steps li::before {
+  counter-increment: item;
+  content: counter(item, decimal-leading-zero);
+}
+
+.bullets li::before {
+  content: "—";
+}
+
+.steps li::before,
+.bullets li::before {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  color: var(--lj-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ctaCard {
+  margin-top: 60px;
+  padding: 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+  align-items: flex-end;
+}
+
+.supportShell {
+  grid-template-columns: minmax(0, 0.9fr) minmax(440px, 1.1fr);
+  align-items: start;
+}
+
+.supportInfo {
+  display: grid;
+  gap: 38px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--lj-line);
+  border-left: 1px solid var(--lj-line);
+}
+
+.infoCard {
+  min-height: 200px;
+  padding: 24px;
+  border-right: 1px solid var(--lj-line);
+  border-bottom: 1px solid var(--lj-line);
+}
+
+.infoCard span {
+  display: inline-block;
+  margin-bottom: 46px;
+  color: var(--lj-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.infoCard h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.infoCard p {
+  margin: 0;
+  color: var(--lj-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.responseNote {
+  padding: 24px;
+}
+
+.responseNote strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.responseNote p {
+  margin: 0;
+  color: var(--lj-muted);
+  line-height: 1.65;
+}
+
+.formCard {
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.formHeading {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--lj-line);
+  margin-bottom: 30px;
+}
+
+.supportForm {
+  display: grid;
+  gap: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.supportForm label {
+  display: grid;
+  gap: 9px;
+}
+
+.supportForm label > span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.supportForm input,
+.supportForm textarea {
+  width: 100%;
+  border: 1px solid var(--lj-line);
+  background: white;
+  color: var(--lj-ink);
+  border-radius: 0;
+  padding: 13px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.supportForm input {
+  min-height: 48px;
+}
+
+.supportForm textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.supportForm input:focus,
+.supportForm textarea:focus {
+  border-color: var(--lj-ink);
+  box-shadow: 0 0 0 1px var(--lj-ink);
+}
+
+.supportForm small {
+  color: var(--lj-muted);
+  font-size: 12px;
+}
+
+.submitButton {
+  min-height: 52px;
+  border: 0;
+  background: var(--lj-ink);
+  color: white;
+  padding: 0 24px;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.formSuccess,
+.formError {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--lj-line);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.formSuccess {
+  background: #eef7ef;
+}
+
+.formError {
+  background: #fff0ee;
+}
+
+.honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 960px) {
+  .heroInner,
+  .ctaCard {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .docsShell,
+  .supportShell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .sidebarCard nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 64px 18px 42px;
+  }
+
+  .docsShell,
+  .supportShell {
+    width: min(100% - 36px, 1240px);
+    padding-top: 38px;
+    padding-bottom: 72px;
+    gap: 34px;
+  }
+
+  .heroTitle {
+    font-size: clamp(48px, 17vw, 72px);
+  }
+
+  .heroActions,
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .sidebarCard nav,
+  .infoGrid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .docSection {
+    padding: 42px 0;
+  }
+
+  .ctaCard {
+    padding: 26px;
+  }
+}
