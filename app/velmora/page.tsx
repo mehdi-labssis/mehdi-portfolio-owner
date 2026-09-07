@@ -18,7 +18,30 @@ export default function VelmoraPage() {
         <p>Made for fashion with a point of view.</p><h1>VELMORA</h1>
         <div><p>An editorial Shopify theme for independent labels, fashion boutiques and modern lifestyle stores.</p><strong>$49 <small>USD · one-time payment</small></strong></div>
       </div>
-      <div className="velmora-actions"><a className="velmora-buy" href={checkoutUrl} target="_blank" rel="noreferrer">Purchase Velmora <ArrowUpRight size={18}/></a><a className="velmora-demo" href={demoUrl} target="_blank" rel="noreferrer">View live demo <ArrowRight size={18}/></a></div>
+<div className="velmora-actions">
+  <a
+    className="velmora-buy"
+    href={checkoutUrl}
+    target="_blank"
+    rel="noreferrer"
+  >
+    Purchase Velmora <ArrowUpRight size={18} />
+  </a>
+
+  <div>
+    <a
+      className="velmora-demo"
+      href={demoUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      View live demo <ArrowRight size={18} />
+    </a>
+    <p style={{ marginTop: "10px", fontSize: "13px" }}>
+      Demo password: <strong>ialash</strong>
+    </p>
+  </div>
+</div>
       <img className="velmora-hero-image" src="/images/velmora/hero.png" alt="Velmora fashion Shopify theme homepage" />
     </section>
     <section className="velmora-intro"><p className="eyebrow">A considered commerce system</p><h2>Designed to look distinctive.<br/><em>Built to sell clearly.</em></h2><p>Velmora pairs a high-fashion editorial direction with the familiar shopping patterns customers expect. Merchants get a flexible foundation without sacrificing visual identity.</p></section>
