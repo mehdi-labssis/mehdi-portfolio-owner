@@ -31,3 +31,193 @@
 /* Look Journal product page */
 .look-journal-sales-page{--v-ink:#171413;--v-paper:#f5eee9}.look-journal-sales-page .velmora-hero-copy h1{font-size:clamp(72px,14vw,215px);letter-spacing:-.055em}.look-journal-sales-page .velmora-intro h2 em{color:#a46855}.look-journal-sales-page .velmora-features{background:#1b1715}.look-journal-sales-page .velmora-cta{background:#d5aa96}.look-demo-password{display:flex;align-items:center;gap:8px;width:max-content;margin:-10px 0 28px;padding:10px 13px;border:1px solid rgba(23,20,19,.25);font-size:11px;letter-spacing:.04em}.look-journal-sales-page .velmora-gallery figure:first-child img{object-position:center}.look-journal-sales-page .velmora-cta>div{flex-wrap:wrap}.look-journal-sales-page .velmora-cta>div a:not(:first-child){font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid}
 @media(max-width:700px){.look-journal-sales-page .velmora-hero-copy h1{font-size:16.5vw;line-height:.84}.look-demo-password{margin-top:2px}.look-journal-sales-page .velmora-gallery img,.look-journal-sales-page .velmora-gallery .wide img{object-position:top}}
+/* Domains for sale */
+.domains-sale {
+  margin-top: clamp(5rem, 10vw, 9rem);
+  padding: clamp(2rem, 5vw, 4.5rem);
+  background: #111111;
+  color: #f5f2ea;
+  overflow: hidden;
+}
+
+.domains-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+  gap: 3rem;
+  align-items: end;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.domains-heading > div > p {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.domains-heading h2 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 6rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.domains-heading h2 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.domains-heading > p {
+  max-width: 430px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.domain-card {
+  min-width: 0;
+  min-height: 430px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    background 250ms ease,
+    transform 250ms ease;
+}
+
+.domain-card:hover {
+  background: #181818;
+}
+
+.domain-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.domain-card-top svg {
+  width: 26px;
+  height: 26px;
+  opacity: 0.75;
+}
+
+.domain-card-top span {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.domain-card h3 {
+  margin: 0 0 1.2rem;
+  overflow-wrap: anywhere;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.domain-card > div:nth-child(2) > p {
+  max-width: 500px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+}
+
+.domain-card-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.domain-card-bottom > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.domain-card-bottom span {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.domain-card-bottom strong {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.domain-card-bottom a {
+  min-height: 50px;
+  padding: 0.85rem 1.15rem;
+  background: #f5f2ea;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.domain-card-bottom a:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .domains-sale {
+    margin-top: 4rem;
+    padding: 1.4rem;
+  }
+
+  .domains-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .domains-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-card {
+    min-height: 390px;
+  }
+
+  .domain-card-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .domain-card-bottom a {
+    width: 100%;
+  }
+}
